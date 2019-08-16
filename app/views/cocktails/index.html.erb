@@ -1,0 +1,29 @@
+<div class="home-banner">
+  <h1>Cocktail House</h1>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%=%>
+    </div>
+  </div>
+</div>
+<h1>Cocktails available</h1>
+<div class= "cards d-inline-flex">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card" style="width: 18rem;">
+    <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=986&q=80" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <p class="card-text"> </p>
+    </div>
+  </div>
+    <% end %>
+  </div>
+
+  <button type="button" class="btn btn-secondary btn-lg" style = "background-color:white"><%= link_to 'Add a cocktail', new_cocktail_path %></button>
+
+
+
+
